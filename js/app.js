@@ -55,17 +55,7 @@ for (objCard of meusCards) {//leitura de itens no localStorage
 }
 
 
-let cards = document.querySelectorAll('.section__card');//evento de click para popup
-cards.forEach(el => el.addEventListener("click", (e) => {
-    e.preventDefault();
-    popup.classList.add('open');
-    const clone = el.cloneNode(true);
-    const paragrafo = clone.children[2].children[1].children[0];
-    clone.children[0].style.display = "none";
-    paragrafo.classList.remove('section__paragrafo');
-    clone.children[2].children[1].classList.add('section__card__box__paragrafo');
-    popup.appendChild(clone);
-}))
+
 
 // função que cria obj com informações do card gerado para armazenar no LocalStorage
 const criarObj = () => { 
