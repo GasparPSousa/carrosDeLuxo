@@ -18,6 +18,8 @@
   margin-top: 10px;
   border-radius: 10px;
   height: 350px;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
   z-index: 999;
 }
 
@@ -33,5 +35,49 @@
   height: 40px;
   margin: 15px;
   border-radius: 10px;
+}
+
+@-webkit-keyframes mostrar-form {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes mostrar-form {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes remover-form {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+
+@keyframes remover-form {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
 }
 /*# sourceMappingURL=formStyle.css.map */
