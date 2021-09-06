@@ -5,7 +5,7 @@
 }
 
 .general__container {
-    min-height: 87.5vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -138,6 +138,11 @@ footer {
     border: 1px solid black;
     padding: 17px;
     margin-bottom: 0;
+    a {
+        padding: 20px;
+        text-decoration: none;
+        color: black;
+    }
 }
  
 
