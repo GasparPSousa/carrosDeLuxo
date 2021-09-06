@@ -13,3 +13,22 @@
 .top__container {
     flex: 1;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 1px solid black;
+}
+
+.navegacao {
+    display: flex;
+    flex-flow: row wrap;
+
+    a {
+        padding: 20px;
+        text-decoration: none;
+        color: black;
+    }
+}
