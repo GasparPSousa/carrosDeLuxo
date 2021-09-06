@@ -122,6 +122,70 @@ main h1 {
   border-radius: 100%;
 }
 
+.section__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 1rem;
+  width: 95vh;
+  margin: 0 auto;
+  max-width: 1440px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.section__cards article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin: 10px;
+}
+
+.section__cards p {
+  border-bottom: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.imagem-card {
+  width: 200px;
+  height: 150px;
+}
+
+.conteudo-card {
+  width: 280px;
+}
+
+.section__paragrafo {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @-webkit-keyframes go-back {
   from {
     -webkit-transform: scale(1.1);
