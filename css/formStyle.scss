@@ -1,0 +1,30 @@
+.container__form {
+    position: fixed;
+    right: 0px;
+    bottom: 90px;
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid black;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 350px;
+    z-index: 999;
+    input {
+       width: 280px;
+       height: 40px;
+       margin: 15px;
+       border-radius: 5px;
+    }
+
+    .container__form__btn-enviar {
+        margin-top: 20px;
+        height: 40px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+}
+
+
