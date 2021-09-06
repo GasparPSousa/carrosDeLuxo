@@ -125,6 +125,11 @@ main {
     width: 280px;
 }
 
+.section__card__box__paragrafo {
+    overflow: auto;
+    height: 200px;
+}
+
 .section__paragrafo {
     text-overflow: ellipsis;
     overflow: hidden;

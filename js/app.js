@@ -3,8 +3,10 @@ let btnAbrirForm = document.querySelector('#btn-abrir-form');
 
 let btn = document.querySelector('#criar-card');
 const localStorageCards = JSON.parse(localStorage.getItem('meusCards'));
-let meusCards = localStorage.getItem('meusCards') !== null ? localStorageCards : [];
 let secaoCards = document.querySelector('#secao-cards');
+let meusCards = localStorage.getItem('meusCards') !== null ? localStorageCards : [];
+
+const popup = document.querySelector('#pop-up');
 
 
 
@@ -12,8 +14,8 @@ let secaoCards = document.querySelector('#secao-cards');
 
 
 //EVENTOS E MÉTODOS:
-// Função para mostrar e remover o formulário
 
+// Função para mostrar e remover o formulário
 let contador = 0;
 btnAbrirForm.addEventListener('click', e => {
     contador++;
@@ -54,7 +56,18 @@ for (objCard of meusCards) {//leitura de itens no localStorage
     secaoCards.appendChild(novoArtigo);
 }
 
-
+//evento de click para popup
+let cards = document.querySelectorAll('.section__card');
+cards.forEach(el => el.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup.classList.add('open');
+    const clone = el.cloneNode(true);
+    const paragrafo = clone.children[2].children[1].children[0];
+    clone.children[0].style.display = "none";
+    paragrafo.classList.remove('section__paragrafo');
+    clone.children[2].children[1].classList.add('section__card__box__paragrafo');
+    popup.appendChild(clone);
+}))
 
 
 // função que cria obj com informações do card gerado para armazenar no LocalStorage
@@ -76,7 +89,8 @@ btn.addEventListener('click', e => {
 
     let novoArtigo = document.createElement('article');
     novoArtigo.setAttribute("class", "section__card");
-    novoArtigo.innerHTML = `
+    novoArtigo.innerHTML = 
+        `
         <!-- img card -->
         <div class="imagem-card">
             <img class="imagem-card" src="${objCard.urlImgCard}" alt="imagem">
@@ -92,7 +106,7 @@ btn.addEventListener('click', e => {
                 </p>
             </div>
         </div>
-    `
+        `
 
     form.titulo.value = "";
     form.descricao.value = "";
@@ -103,5 +117,11 @@ btn.addEventListener('click', e => {
     secaoCards.appendChild(novoArtigo);
     location.reload;
 
+})
+
+
+popup.addEventListener("click", () => {
+    popup.classList.remove('open');
+    popup.removeChild(popup.firstChild);
 })
 
