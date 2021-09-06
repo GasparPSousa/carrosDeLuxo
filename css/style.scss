@@ -50,5 +50,57 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
+}
+
+.btn-abrir-form {
+    box-sizing: border-box;
+    margin: 0;
+    width: 60px;
+    height: 84px;
+    position: fixed;
+    bottom: 10px;
+    right: 2px;
+    cursor: pointer;
+    animation: go-back 0.7s infinite alternate;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+    &:hover {
+        p {
+            color: rgb(11, 12, 37);
+            transform: scale(1.1);
+            transition: ease-in 0.3s;
+        }
+    }
+
+    img {
+        width: 60px;
+        animation: girar 0.5s linear infinite;
+        border-radius: 100%;
+    }
+
+
+}
+
+
+// Animações
+@keyframes go-back {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+
+
+@keyframes girar {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

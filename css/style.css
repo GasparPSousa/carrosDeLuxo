@@ -89,4 +89,80 @@ main h1 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.btn-abrir-form {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  width: 60px;
+  height: 84px;
+  position: fixed;
+  bottom: 10px;
+  right: 2px;
+  cursor: pointer;
+  -webkit-animation: go-back 0.7s infinite alternate;
+          animation: go-back 0.7s infinite alternate;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.btn-abrir-form:hover p {
+  color: #0b0c25;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.btn-abrir-form img {
+  width: 60px;
+  -webkit-animation: girar 0.5s linear infinite;
+          animation: girar 0.5s linear infinite;
+  border-radius: 100%;
+}
+
+@-webkit-keyframes go-back {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes go-back {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes girar {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes girar {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
