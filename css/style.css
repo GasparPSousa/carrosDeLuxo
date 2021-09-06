@@ -186,6 +186,14 @@ main h1 {
   white-space: nowrap;
 }
 
+footer {
+  text-align: center;
+  margin-top: 30px;
+  border: 1px solid black;
+  padding: 17px;
+  margin-bottom: 0;
+}
+
 @-webkit-keyframes go-back {
   from {
     -webkit-transform: scale(1.1);
