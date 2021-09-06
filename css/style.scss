@@ -5,7 +5,7 @@
 }
 
 .general__container {
-    min-height: 100vh;
+    min-height: 87.5vh;
     display: flex;
     flex-direction: column;
 }
@@ -162,5 +162,25 @@ footer {
     }
 }
 
+
+
+// Media Queries
+@media (min-width: 768px) and (max-widt: 1023px) {
+    
+    .general__container {
+        min-height: 92vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .general__container {
+        min-height: 94vh;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 
