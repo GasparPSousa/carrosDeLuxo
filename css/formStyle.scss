@@ -5,10 +5,11 @@
     display: flex;
     margin-right: 10px;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 300px;
     border: 1px solid black;
-    margin-top: 10px;
+    margin-top: 1rem;
     border-radius: 10px;
     height: 350px;
     transform: translateX(120%);
@@ -22,9 +23,12 @@
 
     .container__form__btn-enviar {
         margin-top: 20px;
+        width: 250px;
         height: 40px;
-        margin: 15px;
         border-radius: 10px;
+        // border: none;
+        cursor: pointer;
+        
     }
 }
 

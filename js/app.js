@@ -9,15 +9,11 @@ let meusCards = localStorage.getItem('meusCards') !== null ? localStorageCards :
 const popup = document.querySelector('#pop-up');
 
 
-
-
-
-
 //EVENTOS E MÉTODOS:
 
 // Função para mostrar e remover o formulário
 let contador = 0;
-btnAbrirForm.addEventListener('click', e => {
+btnAbrirForm.addEventListener('click', (e) => {
     contador++;
     e.preventDefault();
     if (contador % 2 == 0) {
@@ -79,7 +75,7 @@ const criarObj = () => {
     return obj;
 }
 
-btn.addEventListener('click', e => {
+btn.addEventListener('click', (e) => {
     e.preventDefault();
     let objCard = criarObj();
     if (form.titulo.value === '' || form.urlImgCard.value === '') {
@@ -92,7 +88,7 @@ btn.addEventListener('click', e => {
     novoArtigo.innerHTML = 
         `
         <!-- img card -->
-        <div class="imagem-card">
+        <div id="imagem-card">
             <img class="imagem-card" src="${objCard.urlImgCard}" alt="imagem">
         </div>
         <div class="conteudo-card">
@@ -115,7 +111,7 @@ btn.addEventListener('click', e => {
     meusCards.push(objCard); // adicionando o obj com informações do card gerado (essas informações são recuperadas no carregamento da pagina para gerar cards salvos)
     localStorage.setItem('meusCards', JSON.stringify(meusCards)); // atualização do localStorage
     secaoCards.appendChild(novoArtigo);
-    location.reload;
+    location.reload();
 
 })
 
