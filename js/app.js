@@ -30,25 +30,29 @@ for (objCard of meusCards) {//leitura de itens no localStorage
     const descricao = objCard.descricao;
     const url = objCard.urlImgCard;
 
-    let novoArtigo = document.createElement('article');
-    novoArtigo.setAttribute("class", "section__card");
-    novoArtigo.innerHTML =
-        ` 
-        <!-- img card -->
-        <div id="imagem-card">
-            <img class="imagem-card" src="${url}" alt="imagem">
-        </div>
-        <div class="conteudo-card">
-            <!-- título -->
-            <div>
-                <p>${titulo}</p>
-            </div>
-            <!-- descrição -->
-            <div>
-                <p class="section__paragrafo">${descricao}</p>
-            </div>
-        </div>
-    `
+
+    let novoArtigo = criarCards(url, titulo, descricao)
+
+
+    // let novoArtigo = document.createElement('article');
+    // novoArtigo.setAttribute("class", "section__card");
+    // novoArtigo.innerHTML =
+    //     ` 
+    //     <!-- img card -->
+    //     <div id="imagem-card">
+    //         <img class="imagem-card" src="${url}" alt="imagem">
+    //     </div>
+    //     <div class="conteudo-card">
+    //         <!-- título -->
+    //         <div>
+    //             <p>${titulo}</p>
+    //         </div>
+    //         <!-- descrição -->
+    //         <div>
+    //             <p class="section__paragrafo">${descricao}</p>
+    //         </div>
+    //     </div>
+    // `
     secaoCards.appendChild(novoArtigo);
 }
 
@@ -58,10 +62,11 @@ cards.forEach(el => el.addEventListener("click", (e) => {
     e.preventDefault();
     popup.classList.add('open');
     const clone = el.cloneNode(true);
-    const paragrafo = clone.children[2].children[1].children[0];
-    clone.children[0].style.display = "none";
+    //console.log(clone);
+    const paragrafo = clone.children[1].children[1].children[0]
+    //clone.children[0].style.display = "none"; // Se colocar a lixeira, descomentar
     paragrafo.classList.remove('section__paragrafo');
-    clone.children[2].children[1].classList.add('section__card__box__paragrafo');
+    clone.children[1].children[1].classList.add('section__card__box__paragrafo');
     popup.appendChild(clone);
 }))
 
@@ -79,30 +84,32 @@ btn.addEventListener('click', (e) => {
     e.preventDefault();
     let objCard = criarObj();
     if (form.titulo.value === '' || form.urlImgCard.value === '') {
-        alert('OS campos de título e url não podem estar vazios!')
+        alert('Os campos de título e url não podem estar vazios!')
         return
     }
 
-    let novoArtigo = document.createElement('article');
-    novoArtigo.setAttribute("class", "section__card");
-    novoArtigo.innerHTML = 
-        `
-        <!-- img card -->
-        <div id="imagem-card">
-            <img class="imagem-card" src="${objCard.urlImgCard}" alt="imagem">
-        </div>
-        <div class="conteudo-card">
-            <!-- título -->
-            <div>
-                <p>${objCard.titulo}</p>
-            </div>
-            <div>
-                <p class="section__paragrafo">
-                ${objCard.descricao}
-                </p>
-            </div>
-        </div>
-        `
+    let novoArtigo = criarCards(objCard.urlImgCard, objCard.titulo, objCard.descricao)
+
+    // let novoArtigo = document.createElement('article');
+    // novoArtigo.setAttribute("class", "section__card");
+    // novoArtigo.innerHTML = 
+    //     `
+    //     <!-- img card -->
+    //     <div id="imagem-card">
+    //         <img class="imagem-card" src="${objCard.urlImgCard}" alt="imagem">
+    //     </div>
+    //     <div class="conteudo-card">
+    //         <!-- título -->
+    //         <div>
+    //             <p>${objCard.titulo}</p>
+    //         </div>
+    //         <div>
+    //             <p class="section__paragrafo">
+    //             ${objCard.descricao}
+    //             </p>
+    //         </div>
+    //     </div>
+    //     `
 
     form.titulo.value = "";
     form.descricao.value = "";
@@ -115,6 +122,29 @@ btn.addEventListener('click', (e) => {
 
 })
 
+function criarCards(url, titulo, descricao) {
+    let novoArtigo = document.createElement('article');
+    novoArtigo.setAttribute("class", "section__card");
+    novoArtigo.innerHTML = 
+        `
+        <!-- img card -->
+        <div id="imagem-card">
+            <img class="imagem-card" src="${url}" alt="imagem">
+        </div>
+        <div class="conteudo-card">
+            <!-- título -->
+            <div>
+                <p>${titulo}</p>
+            </div>
+            <div>
+                <p class="section__paragrafo">
+                ${descricao}
+                </p>
+            </div>
+        </div>
+        `
+        return novoArtigo;
+}
 
 popup.addEventListener("click", () => {
     popup.classList.remove('open');
