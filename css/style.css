@@ -131,7 +131,7 @@ main h1 {
   width: 60px;
   -webkit-animation: girar 0.5s linear infinite;
           animation: girar 0.5s linear infinite;
-  border-radius: 200%;
+  border-radius: 100%;
 }
 
 .btn-abrir-form p {
