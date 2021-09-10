@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #0C0F0C;
+}
+
+
 .general__container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     min-width: 320px;
+    // background-color: black;
     
 }
 
@@ -31,8 +37,14 @@ header {
     a {
         padding: 20px;
         text-decoration: none;
-        color: black;
+        color: #EBB359;
+        font-weight: bold;
+        font-size: 18px;
     }
+}
+
+#titulo-principal {
+    color: #EBB359;
 }
 
 main {
@@ -61,8 +73,8 @@ main {
     width: 60px;
     height: 84px;
     position: fixed;
-    bottom: 10px;
-    right: 2px;
+    bottom: 40px;
+    right: 20px;
     cursor: pointer;
     animation: go-back 0.7s infinite alternate;
     text-align: center;
@@ -70,16 +82,22 @@ main {
     z-index: 1000;
     &:hover {
         p {
-            color: rgb(11, 12, 37);
-            transform: scale(1.1);
+            color: white;
+            // color: rgb(11, 12, 37);
+            transform: scale(1.2);
             transition: ease-in 0.3s;
+            
         }
     }
 
     img {
         width: 60px;
         animation: girar 0.5s linear infinite;
-        border-radius: 100%;
+        border-radius: 200%;
+    }
+
+    p {
+        color: #EBB359;
     }
 
 
@@ -94,7 +112,7 @@ main {
     width: 95vw;
     margin: 0 auto;
     max-width: 1440px;
-    border: 1px solid black;
+    border: 1px solid #9E7634;;
     border-radius: 10px;
     padding: 10px;
     article {
@@ -102,7 +120,7 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 1px solid black;
+        border: 1px solid #9E7634;
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -111,7 +129,7 @@ main {
     }
 
     p {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #9E7634;
         border-radius: 10px;
         margin: 20px;
         padding: 10px;
@@ -132,10 +150,15 @@ main {
     height: 200px;
 }
 
+.section__titulo {
+    color: #9E7634;
+}
+
 .section__paragrafo {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    color: #9E7634
 }
 
 
@@ -149,7 +172,10 @@ footer {
     a {
         padding: 20px;
         text-decoration: none;
-        color: black;
+        color: #EBB359;
+        font-weight: bold;
+        font-size: 18px;
+        
     }
 }
  

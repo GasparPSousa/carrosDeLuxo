@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #0C0F0C;
+}
+
 .general__container {
   height: 100vh;
   display: -webkit-box;
@@ -53,7 +57,13 @@ header {
 .navegacao a {
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: #EBB359;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#titulo-principal {
+  color: #EBB359;
 }
 
 main {
@@ -98,8 +108,8 @@ main h1 {
   width: 60px;
   height: 84px;
   position: fixed;
-  bottom: 10px;
-  right: 2px;
+  bottom: 40px;
+  right: 20px;
   cursor: pointer;
   -webkit-animation: go-back 0.7s infinite alternate;
           animation: go-back 0.7s infinite alternate;
@@ -109,9 +119,9 @@ main h1 {
 }
 
 .btn-abrir-form:hover p {
-  color: #0b0c25;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  color: white;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
 }
@@ -120,7 +130,11 @@ main h1 {
   width: 60px;
   -webkit-animation: girar 0.5s linear infinite;
           animation: girar 0.5s linear infinite;
-  border-radius: 100%;
+  border-radius: 200%;
+}
+
+.btn-abrir-form p {
+  color: #EBB359;
 }
 
 .section__cards {
@@ -138,7 +152,7 @@ main h1 {
   width: 95vw;
   margin: 0 auto;
   max-width: 1440px;
-  border: 1px solid black;
+  border: 1px solid #9E7634;
   border-radius: 10px;
   padding: 10px;
 }
@@ -157,7 +171,7 @@ main h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid black;
+  border: 1px solid #9E7634;
   width: 300px;
   height: 300px;
   border-radius: 10px;
@@ -166,7 +180,7 @@ main h1 {
 }
 
 .section__cards p {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #9E7634;
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
@@ -186,10 +200,15 @@ main h1 {
   height: 200px;
 }
 
+.section__titulo {
+  color: #9E7634;
+}
+
 .section__paragrafo {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  color: #9E7634;
 }
 
 footer {
@@ -203,7 +222,9 @@ footer {
 footer a {
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: #EBB359;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 @-webkit-keyframes go-back {

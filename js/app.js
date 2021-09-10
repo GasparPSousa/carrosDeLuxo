@@ -33,26 +33,6 @@ for (objCard of meusCards) {//leitura de itens no localStorage
 
     let novoArtigo = criarCards(url, titulo, descricao)
 
-
-    // let novoArtigo = document.createElement('article');
-    // novoArtigo.setAttribute("class", "section__card");
-    // novoArtigo.innerHTML =
-    //     ` 
-    //     <!-- img card -->
-    //     <div id="imagem-card">
-    //         <img class="imagem-card" src="${url}" alt="imagem">
-    //     </div>
-    //     <div class="conteudo-card">
-    //         <!-- título -->
-    //         <div>
-    //             <p>${titulo}</p>
-    //         </div>
-    //         <!-- descrição -->
-    //         <div>
-    //             <p class="section__paragrafo">${descricao}</p>
-    //         </div>
-    //     </div>
-    // `
     secaoCards.appendChild(novoArtigo);
 }
 
@@ -90,26 +70,6 @@ btn.addEventListener('click', (e) => {
 
     let novoArtigo = criarCards(objCard.urlImgCard, objCard.titulo, objCard.descricao)
 
-    // let novoArtigo = document.createElement('article');
-    // novoArtigo.setAttribute("class", "section__card");
-    // novoArtigo.innerHTML = 
-    //     `
-    //     <!-- img card -->
-    //     <div id="imagem-card">
-    //         <img class="imagem-card" src="${objCard.urlImgCard}" alt="imagem">
-    //     </div>
-    //     <div class="conteudo-card">
-    //         <!-- título -->
-    //         <div>
-    //             <p>${objCard.titulo}</p>
-    //         </div>
-    //         <div>
-    //             <p class="section__paragrafo">
-    //             ${objCard.descricao}
-    //             </p>
-    //         </div>
-    //     </div>
-    //     `
 
     form.titulo.value = "";
     form.descricao.value = "";
@@ -134,7 +94,7 @@ function criarCards(url, titulo, descricao) {
         <div class="conteudo-card">
             <!-- título -->
             <div>
-                <p>${titulo}</p>
+                <p class="section__titulo">${titulo}</p>
             </div>
             <div>
                 <p class="section__paragrafo">
