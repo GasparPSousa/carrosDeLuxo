@@ -28,6 +28,8 @@ header {
     align-items: center;
     flex-flow: row wrap;
     border: 1px solid black;
+    background-color: #EBB359;
+    opacity: 0.7;
 }
 
 .navegacao {
@@ -37,7 +39,7 @@ header {
     a {
         padding: 20px;
         text-decoration: none;
-        color: #EBB359;
+        color: black;
         font-weight: bold;
         font-size: 18px;
     }
@@ -113,7 +115,7 @@ main {
     width: 95vw;
     margin: 0 auto;
     max-width: 1440px;
-    border: 1px solid #9E7634;;
+    border: 1px solid #EBB359;;
     border-radius: 10px;
     padding: 10px;
     article {
@@ -121,7 +123,7 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 1px solid #9E7634;
+        border: 1px solid #EBB359;
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -130,8 +132,8 @@ main {
     }
 
     p {
-        border-bottom: 1px solid #9E7634;
-        border-radius: 10px;
+        border-bottom: 1px solid #EBB359;
+        // border-radius: 10px;
         margin: 20px;
         padding: 10px;
     }
@@ -140,6 +142,7 @@ main {
 .imagem-card {
     width: 200px;
     height: 150px;
+    border-radius: 10px;
 }
 
 .conteudo-card {
@@ -152,14 +155,14 @@ main {
 }
 
 .section__titulo {
-    color: #9E7634;
+    color: #EBB359;
 }
 
 .section__paragrafo {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    color: #9E7634
+    color: #EBB359
 }
 
 
@@ -169,11 +172,13 @@ footer {
     border: 1px solid black;
     padding: 17px;
     margin-bottom: 0;
+    background-color: #EBB359;
+    opacity: 0.7;
 
     a {
         padding: 20px;
         text-decoration: none;
-        color: #EBB359;
+        color: black;
         font-weight: bold;
         font-size: 18px;
         
@@ -204,23 +209,23 @@ footer {
 
 
 
-// Media Queries
-@media (min-width: 768px) and (max-width: 1023px) {
+//Media Queries
+// @media (min-width: 768px) and (max-width: 1023px) {
     
-    .general__container {
-        min-height: 92vh;
-        display: flex;
-        flex-direction: column;
-    }
-}
+//     .general__container {
+//         min-height: 92vh;
+//         display: flex;
+//         flex-direction: column;
+//     }
+// }
 
-@media (min-width: 1024px) {
+// @media (min-width: 1024px) {
     
-    .general__container {
-        min-height: 94vh;
-        display: flex;
-        flex-direction: column;
-    }
-}
+//     .general__container {
+//         min-height: 94vh;
+//         display: flex;
+//         flex-direction: column;
+//     }
+// }
 
 

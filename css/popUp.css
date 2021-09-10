@@ -45,7 +45,7 @@
   border-radius: 10px;
   margin-top: 1rem;
   margin: 10px;
-  background-color: aqua;
+  background-color: #EBB359;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -53,6 +53,10 @@
 .pop-up.open article img {
   width: 230px;
   border-radius: 7px;
+}
+
+.pop-up.open article p {
+  color: black;
 }
 
 .pop-up.open p {

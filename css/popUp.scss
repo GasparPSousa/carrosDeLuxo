@@ -27,12 +27,17 @@
         border-radius: 10px;
         margin-top: 1rem;
         margin: 10px;
-        background-color: aqua;
+        background-color: #EBB359;
+        ;
         transform: scale(1.2);
 
         img {
             width: 230px;
             border-radius: 7px;
+        }
+
+        p {
+            color: black;
         }
     }
 
