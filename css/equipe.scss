@@ -27,8 +27,15 @@ body
     font-family: 'Spartan', sans-serif;
     text-align: center;
     font-size: 15px;
-    background: linear-gradient(120deg, #031E6B, #4DE4CF);
+    // background: linear-gradient(120deg, #031E6B, #4DE4CF);
+    background-color: #0C0F0C;
+    background-image: url(../imgs/TelaDeFundo06.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
 }
+
 .logo__menu {
     flex: 50%;
     padding: 10px;
@@ -75,16 +82,22 @@ li
 }
 
 footer {
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    background-color: #030200;
-    color: white;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // width: 100%;
+    // height: 10vh;
+    // background-color: #030200;
+    // color: white;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .flex-item-1
 {
     flex:100%;
+    color: white;
+}
+
+h2 {
+    color: white;
+    box-shadow: 10px 5px 5px white;
 }

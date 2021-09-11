@@ -6,6 +6,13 @@
 
 body {
     background-color: #0C0F0C;
+    background-image: url(../imgs/TelaDeFundo06.jpg);
+    background-repeat: repeat-y;
+    background-position:center;
+    background-size: cover;
+    // -webkit-background-size:cover;
+    // -moz-background-size:cover;
+    // -o-background-size:cover;
 }
 
 
@@ -25,29 +32,37 @@ body {
 header {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     flex-flow: row wrap;
-    border: 1px solid black;
-    background-color: #EBB359;
-    opacity: 0.7;
+    // border: 1px solid black;
+    // background-color: #EBB359;
+    // background-color: darkgray;
+    // opacity: 0.3;
 }
 
 .navegacao {
     display: flex;
     flex-flow: row wrap;
+    
 
     a {
-        padding: 20px;
+        padding: 10px 20px 0px 20px;
         text-decoration: none;
-        color: black;
+        // color: black;
+        color: #EBB359;
+        
         font-weight: bold;
         font-size: 18px;
+        
     }
 }
 
 #titulo-principal {
     color: #EBB359;
-    padding: 0 0 30px 0;
+    // padding: 0 0 10px 0;
+    // color: white;
+    // border: 1px solid black;
+    
 }
 
 main {
@@ -115,7 +130,7 @@ main {
     width: 95vw;
     margin: 0 auto;
     max-width: 1440px;
-    border: 1px solid #EBB359;;
+    // border: 1px solid #EBB359;
     border-radius: 10px;
     padding: 10px;
     article {
@@ -123,7 +138,9 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 1px solid #EBB359;
+        border: 2px solid #EBB359;
+        // border: 2px solid white;
+        box-shadow: 8px 5px 5px #EBB359;
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -169,16 +186,16 @@ main {
 footer {
     text-align: center;
     margin-top: 30px;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding: 17px;
     margin-bottom: 0;
-    background-color: #EBB359;
+    // background-color: #EBB359;
     opacity: 0.7;
 
     a {
         padding: 20px;
         text-decoration: none;
-        color: black;
+        color: #EBB359;
         font-weight: bold;
         font-size: 18px;
         
