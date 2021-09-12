@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+:root {
+  --cor-auxiliar: #EBB359;
+}
+
 body {
   background-color: #0C0F0C;
   background-image: url(../imgs/TelaDeFundo06.jpg);
@@ -35,9 +39,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -58,15 +62,19 @@ header {
 }
 
 .navegacao a {
-  padding: 10px 20px 0px 20px;
+  padding: 20px 20px 20px 20px;
   text-decoration: none;
-  color: #EBB359;
+  color: var(--cor-auxiliar);
   font-weight: bold;
   font-size: 18px;
 }
 
+.navegacao a:hover {
+  color: aqua;
+}
+
 #titulo-principal {
-  color: #EBB359;
+  color: var(--cor-auxiliar);
 }
 
 main {
@@ -122,7 +130,7 @@ main h1 {
 }
 
 .btn-abrir-form:hover p {
-  color: white;
+  color: aqua;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: ease-in 0.3s;
@@ -137,7 +145,8 @@ main h1 {
 }
 
 .btn-abrir-form p {
-  color: #EBB359;
+  color: var(--cor-auxiliar);
+  font-size: 18px;
 }
 
 .section__cards {
@@ -173,9 +182,9 @@ main h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid #EBB359;
-  -webkit-box-shadow: 8px 5px 5px #EBB359;
-          box-shadow: 8px 5px 5px #EBB359;
+  border: 2px solid var(--cor-auxiliar);
+  -webkit-box-shadow: 8px 5px 5px var(--cor-auxiliar);
+          box-shadow: 8px 5px 5px var(--cor-auxiliar);
   width: 300px;
   height: 300px;
   border-radius: 10px;
@@ -184,7 +193,7 @@ main h1 {
 }
 
 .section__cards p {
-  border-bottom: 1px solid #EBB359;
+  border-bottom: 1px solid var(--cor-auxiliar);
   margin: 20px;
   padding: 10px;
 }
@@ -205,14 +214,14 @@ main h1 {
 }
 
 .section__titulo {
-  color: #EBB359;
+  color: var(--cor-auxiliar);
 }
 
 .section__paragrafo {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: #EBB359;
+  color: var(--cor-auxiliar);
 }
 
 footer {
@@ -226,7 +235,7 @@ footer {
 footer a {
   padding: 20px;
   text-decoration: none;
-  color: #EBB359;
+  color: var(--cor-auxiliar);
   font-weight: bold;
   font-size: 18px;
 }

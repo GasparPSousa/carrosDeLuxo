@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cor-auxiliar: #EBB359;
+}
+
 body {
     background-color: #0C0F0C;
     background-image: url(../imgs/TelaDeFundo06.jpg);
@@ -31,7 +35,7 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items:center;
     flex-flow: row wrap;
     // border: 1px solid black;
@@ -46,19 +50,23 @@ header {
     
 
     a {
-        padding: 10px 20px 0px 20px;
+        padding: 20px 20px 20px 20px;
         text-decoration: none;
-        // color: black;
-        color: #EBB359;
-        
+        color:  var(--cor-auxiliar);
         font-weight: bold;
         font-size: 18px;
+        // box-shadow: 4px 3px 3px var(--cor-auxiliar);
+        &:hover {
+            color: aqua;
+        }
+    }
         
     }
-}
+
+    
 
 #titulo-principal {
-    color: #EBB359;
+    color:  var(--cor-auxiliar);
     // padding: 0 0 10px 0;
     // color: white;
     // border: 1px solid black;
@@ -100,7 +108,7 @@ main {
     z-index: 1000;
     &:hover {
         p {
-            color: white;
+            color: aqua;
             // color: rgb(11, 12, 37);
             transform: scale(1.2);
             transition: ease-in 0.3s;
@@ -115,7 +123,8 @@ main {
     }
 
     p {
-        color: #EBB359;
+        color:  var(--cor-auxiliar);
+        font-size: 18px;
     }
 
 
@@ -138,9 +147,9 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 2px solid #EBB359;
+        border: 2px solid  var(--cor-auxiliar);
         // border: 2px solid white;
-        box-shadow: 8px 5px 5px #EBB359;
+        box-shadow: 8px 5px 5px  var(--cor-auxiliar);
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -149,7 +158,7 @@ main {
     }
 
     p {
-        border-bottom: 1px solid #EBB359;
+        border-bottom: 1px solid  var(--cor-auxiliar);
         // border-radius: 10px;
         margin: 20px;
         padding: 10px;
@@ -172,14 +181,14 @@ main {
 }
 
 .section__titulo {
-    color: #EBB359;
+    color:  var(--cor-auxiliar);
 }
 
 .section__paragrafo {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    color: #EBB359
+    color:  var(--cor-auxiliar);
 }
 
 
@@ -195,9 +204,10 @@ footer {
     a {
         padding: 20px;
         text-decoration: none;
-        color: #EBB359;
+        color:  var(--cor-auxiliar);
         font-weight: bold;
         font-size: 18px;
+        // box-shadow: 5px 5px 5px #EBB359;
         
     }
 }
