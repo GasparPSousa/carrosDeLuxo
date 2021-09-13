@@ -1,5 +1,5 @@
 let form = document.querySelector('#form-card'); // Fazendo referência ao formulário(form com id="form-card")
-let btnAbrirForm = document.querySelector('#btn-abrir-form'); //
+let btnAbrirForm = document.querySelector('#btn-abrir-form'); // 
 
 let btn = document.querySelector('#criar-card'); //
 const localStorageCards = JSON.parse(localStorage.getItem('meusCards'));//
@@ -33,8 +33,10 @@ for (objCard of meusCards) {//leitura de itens no localStorage
     secaoCards.appendChild(novoArtigo);
 }
 
+
 const lixeiras = document.querySelectorAll('[data-click]');
-lixeiras.forEach(el => el.addEventListener("click", (e) => {//para excluir cards
+//Função para excluir cards
+lixeiras.forEach(el => el.addEventListener("click", (e) => {
     let idLixeira = parseInt(el.id);//pegando o número do id que é o mesmo numero do index do card no array meusCards
     let indexCard = indexCards.indexOf(idLixeira);
     console.log(indexCard);
@@ -85,7 +87,8 @@ cards.forEach(el => el.addEventListener("click", (e) => {
 
 
 // Lixeira
-function idGenerator() {//função para gerar ids
+//função para gerar ids
+function idGenerator() {
     return Math.round(Math.random() * 1000);
 }
 
@@ -99,19 +102,22 @@ const criarObj = () => {
     return obj;
 }
 
+// Gerando uma funcão anômima para executar todo o procedimento para gerar um card.
 btn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    
+    // Fazendo a validação de dadod
     if (form.titulo.value === '' || form.urlImgCard.value === '') {
         alert('Os campos de título e url não podem estar vazios!')
         return
     }
 
+    // Criando o Objeto
     let objCard = criarObj();
+    // Passando os itens do objeto como argumentos para criar os Cards
     let novoArtigo = criarCards(objCard.idCard, objCard.urlImgCard, objCard.titulo, objCard.descricao); // Inseri o id
 
-
+    //Limpando os campos
     form.titulo.value = "";
     form.descricao.value = "";
     form.urlImgCard.value = "";
@@ -120,13 +126,14 @@ btn.addEventListener('click', (e) => {
     indexCards.push(objCard.idCard);//adicionando o id gerado no array indexCards
     meusCards.push(objCard); // adicionando o obj com informações do card gerado (essas informações são recuperadas no carregamento da pagina para gerar cards salvos)
     localStorage.setItem('meusCards', JSON.stringify(meusCards)); // atualização do localStorage
-    localStorage.setItem('idsCards', JSON.stringify(indexCards));//atualização do localStorage
-    secaoCards.appendChild(novoArtigo);
+    localStorage.setItem('idsCards', JSON.stringify(indexCards)); //atualização do localStorage
+    secaoCards.appendChild(novoArtigo); // Inserindo o card criado como filho da Secao Cards
     location.reload();
 
 })
 
 // Para Lixeira, inseri a parte da lixeira no html e o id no parâmetro
+// Funcção para criar os Cards Dinamicamente
 function criarCards(id, url, titulo, descricao) {
     let novoArtigo = document.createElement('article');
     novoArtigo.setAttribute("class", "section__card");
@@ -154,6 +161,7 @@ function criarCards(id, url, titulo, descricao) {
         `
         return novoArtigo;
 }
+
 
 popup.addEventListener("click", () => {
     popup.classList.remove('open');

@@ -28,7 +28,7 @@
 }
 
 .container__form input {
-  width: 280px;
+  width: 250px;
   height: 40px;
   margin: 15px;
   border-radius: 5px;
@@ -49,7 +49,7 @@
 
 .container__form .container__form__btn-enviar {
   margin-top: 20px;
-  width: 280px;
+  width: 250px;
   height: 40px;
   border-radius: 10px;
   cursor: pointer;
