@@ -12,9 +12,9 @@
 body {
   background-color: #0C0F0C;
   background-image: url(../imgs/TelaDeFundo06.jpg);
-  background-repeat: repeat-y;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .general__container {
