@@ -8,7 +8,9 @@
     align-items: center;
     flex-direction: column;
     width: 300px;
-    border: 1px solid black;
+    // border: 1px solid black;
+    background: rgb(0,8,9);
+    background: linear-gradient(348deg, rgba(0,8,9,0.87718837535014) 0%, rgba(27, 29, 31, 0.795) 94%);
     margin-top: 1rem;
     border-radius: 10px;
     height: 350px;
@@ -19,16 +21,38 @@
        height: 40px;
        margin: 15px;
        border-radius: 5px;
+       border: none;
+       background-color: rgba(99, 134, 161, 0.486);
+       color: rgb(189, 212, 231);
+       font-size: 15px;
+       letter-spacing: 1.5px;
+
+       &:focus {
+        background-color: rgba(82, 121, 153, 0.486);
+        border-bottom: solid #EBB359 1px;
+        outline: 0;
+        transform: scale(1.05);
+    }
     }
 
     .container__form__btn-enviar {
         margin-top: 20px;
-        width: 250px;
+        width: 280px;
         height: 40px;
         border-radius: 10px;
         // border: none;
         cursor: pointer;
-        
+        background: rgba(14, 15, 15, 0.836);
+        background: linear-gradient(61deg, rgba(226, 223, 30, 0.938) 0%, rgba(197, 41, 21, 0.95) 48%, rgba(221, 224, 20, 0.961) 100%);
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        &:hover {
+            animation: neon 1s ease-in-out infinite alternate;
+            cursor: pointer;
+        }
+
     }
 }
 
@@ -53,5 +77,17 @@
         transform: translateX(120%);
     }
 }
+
+
+@keyframes neon {
+    from {
+      box-shadow: 0 0 1px rgba(238, 230, 230, 0.486), 0 0 3px rgba(238, 230, 230, 0.486), 0 0 5px rgba(238, 230, 230, 0.486), 0 0 10px rgba(34, 192, 195, 0.705), 0 0 20px rgba(34, 192, 195, 0.479), 0 0 30px rgba(34, 192, 195, 0.589), 0 0 40px rgba(34, 192, 195, 0.534), 0 0 50px rgba(34, 192, 195, 0.788);
+      opacity: 0.6;
+    }
+    to {
+        box-shadow: 0 0 0px rgba(238, 230, 230, 0.486), 0 0 1px rgba(238, 230, 230, 0.486), 0 0 3px rgba(238, 230, 230, 0.486), 0 0 7px rgb(34,193,195), 0 0 15px rgb(34,193,195), 0 0 23px rgb(34,193,195), 0 0 30px rgba(34, 192, 195, 0.603), 0 0 35px rgba(34, 192, 195, 0.678);
+        opacity: 1;
+    }
+  }
 
 
