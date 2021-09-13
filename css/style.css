@@ -198,6 +198,74 @@ main h1 {
   padding: 10px;
 }
 
+.section__card__lixeira--disable {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+.section__card__lixeira--disable:hover {
+  -webkit-animation: lixeira  0.1s ease;
+          animation: lixeira  0.1s ease;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+.section__card__lixeira__img--disable {
+  position: absolute;
+  width: 30px;
+  opacity: 0.4;
+  background-color: rgba(162, 163, 163, 0.514);
+  padding: 2px;
+  border-radius: 7px;
+}
+
+.section__card__lixeira {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 80px;
+  height: 80px;
+  padding: 7px;
+}
+
+.section__card__lixeira:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.section__card__lixeira__img1 {
+  position: absolute;
+  width: 30px;
+  background-color: var(--cor-auxiliar);
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.section__card__lixeira__img1:hover {
+  margin-bottom: 3px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
+.section__card__lixeira__img2 {
+  position: absolute;
+  width: 30px;
+  padding: 2px;
+}
+
+.section__card__lixeira__img2:hover {
+  margin-top: 3px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+
 .imagem-card {
   width: 200px;
   height: 150px;
@@ -281,6 +349,52 @@ footer a {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes lixeira {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes lixeira {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

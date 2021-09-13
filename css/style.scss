@@ -166,6 +166,70 @@ main {
     }
 }
 
+
+// Lixeira
+
+.section__card__lixeira--disable {
+
+    align-self: flex-end;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    &:hover {
+        animation: lixeira  0.1s ease;
+        animation-iteration-count: 2;       
+    }
+}
+
+.section__card__lixeira__img--disable {
+    position: absolute;
+    width: 30px;
+    opacity: 0.4;
+    background-color: rgba(162, 163, 163, 0.514);
+    padding: 2px;
+    border-radius: 7px;
+}
+
+.section__card__lixeira {
+    align-self: flex-end;
+    width: 80px;
+    height: 80px;
+    padding: 7px;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
+
+.section__card__lixeira__img1 {
+    position: absolute;
+    width: 30px;
+    // background-color: rgba(255, 85, 99, 0.719);
+    background-color: var(--cor-auxiliar);
+    border-radius: 10px;
+    padding: 2px;
+    &:hover {
+        margin-bottom: 3px;
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
+
+.section__card__lixeira__img2 {
+    position: absolute;
+    width: 30px;
+    padding: 2px;
+    &:hover {
+        margin-top: 3px;
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+}
+
+// Fim da Lixeira
+
 .imagem-card {
     width: 200px;
     height: 150px;
@@ -233,6 +297,15 @@ footer {
     to {
         transform: rotate(360deg);
     }
+}
+
+// Lixeira
+@keyframes lixeira {
+    0% {transform: translateX(0);} 
+    25% {transform: translateX(5px);}
+    50% {transform: translateX(0);} 
+    75% {transform: translateX(-5px);} 
+    100% {transform: translateX(0);} 
 }
 
 
